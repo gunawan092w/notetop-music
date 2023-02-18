@@ -1,12 +1,36 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const { Client, Collection, Events, GatewayIntentBits, ActivityType } = require('discord.js');
+const { Client, Collection, Events, GatewayIntentBits, ActivityType, REST, Routes } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const config = require('./config.json');
 client.commands = new Collection();
 
+// Loads Slash Commands in commands folder
+const commands = [];
+// Grab all the command files from the commands directory you created earlier
+const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+
+// Grab the SlashCommandBuilder#toJSON() output of each command's data for deployment
+for (const file of commandFiles) {
+	const command = require(`./commands/${file}`);
+	commands.push(command.data.toJSON());
+}
+const rest = new REST({ version: '10' }).setToken(config.bottoken);
+
+(async () => {
+  try {
+    console.log('Started refreshing application (/) commands.');
+
+    await rest.put(Routes.applicationCommands(config.botclientid), { body: commands });
+
+    console.log('Successfully reloaded application (/) commands.');
+  } catch (error) {
+    console.error(error);
+  }
+})();
+
+// kinda command handler... i think
 const commandsPath = path.join(__dirname, 'commands');
-const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
 	const filePath = path.join(commandsPath, file);
@@ -42,21 +66,6 @@ client.on('ready', () => {
   client.user.setActivity("A Movie - Test Status", {
     type: ActivityType.Watching,
   });
-});
-client.on(Events.InteractionCreate, async interaction => {
-	if (!interaction.isChatInputCommand()) return;
-
-	if (interaction.commandName === 'button') {
-		const row = new ActionRowBuilder()
-			.addComponents(
-				new ButtonBuilder()
-					.setCustomId('primary')
-					.setLabel('Click me!')
-					.setStyle(ButtonStyle.Primary),
-			);
-
-		await interaction.reply({ content: 'I think you should,', components: [row] });
-	}
 });
 
 client.login(config.bottoken);
