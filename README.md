@@ -3,8 +3,6 @@ Source code of GunawanBot. Support: bit.ly/GBSupportSRV
 
 **Development has paused!**
 
-to load slash command, please do `node slash-register.js`. slash register will be soon merged into index.js.
-
 `npm install` - to install required dependency
 `node .` - run bot
 
