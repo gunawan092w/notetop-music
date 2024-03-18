@@ -1,0 +1,27 @@
+{
+  "name": "notetop-music",
+  "version": "1.0.0",
+  "description": "A Music Bot based of erela.js and Lavalink",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "gunawan092w",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "erela.js": "github:Tomato6966/erela.js",
+    "erela.js-spotify": "^1.2.0",
+    "express.js": "^1.0.0",
+    "toml": "^3.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gunawan092w/notetop-music.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gunawan092w/notetop-music/issues"
+  },
+  "homepage": "https://github.com/gunawan092w/notetop-music#readme"
+}

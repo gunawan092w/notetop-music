@@ -1,0 +1,8 @@
+[bot]
+token = ""
+prefix = "g?"
+clientid = "" # Required for invite command, otherwise it will return "undefined"
+
+[spotify]
+clientid = "" # https://developers.spotify.com
+clientsecret = "" # https://developers.spotify.com
