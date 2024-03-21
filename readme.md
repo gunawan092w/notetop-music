@@ -4,5 +4,4 @@
 </div>
 
 # Our bot
-You can invite our bot here!
-https://discord.com/oauth2/authorize?client_id=1216410879059427429&permissions=274914937344&scope=bot+applications.commands
+You can invite our bot using [this link!](https://discord.com/oauth2/authorize?client_id=1216410879059427429&permissions=274914937344&scope=bot+applications.commands)
