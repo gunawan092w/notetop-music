@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Notetop Music</h1>
-  <h4>NoteTop Music is a discord bot that allows you to listen music in Discord Server! .</h4>
+  <h4>Discord Music Bot - Based of erela.js and lavalink v3.</h4>
 </div>
 
 # Our bot
