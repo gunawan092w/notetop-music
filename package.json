@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "discord.js": "^14.14.1",
-    "erela.js": "github:Tomato6966/erela.js",
+    "erela.js": "github:Adivise/better-erela.js",
     "erela.js-spotify": "^1.2.0",
     "express.js": "^1.0.0",
     "toml": "^3.0.0"

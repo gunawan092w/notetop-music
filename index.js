@@ -14,8 +14,8 @@ for (const file of commandFiles) {const command = require(`./commands/${file}`);
 
 client.manager = new Manager ({
     plugins: [ new Spotify({ clientID, clientSecret }) ],
-    nodes: [{ host: "lavalink.ddns.net", port:2433 , password: "discord.gg/FqEQtEtUc9", retryDelay: 5000 }],
-    //nodes: [{ host: "127.0.0.1", port:8081, password: "youshallnotpass", retryDelay: 5000, version: "v4", useVersionPath: true }],
+    nodes: [{ host: "lava-v3.ajieblogs.eu.org", port:80, password: "https://dsc.gg/ajidevserver", retryDelay: 5000, version: "v3", useVersionPath: true }],
+    //nodes: [{ host: "127.0.0.1", port:8081, password: "youshallnotpass", retryDelay: 5000, useVersionPath: false }],
     send: (id, payload) => { const guild = client.guilds.cache.get(id); if (guild) guild.shard.send(payload); }
 });
 
