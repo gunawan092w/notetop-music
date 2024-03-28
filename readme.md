@@ -8,3 +8,6 @@ You can invite our bot using [this link!](https://discord.com/oauth2/authorize?c
 
 # Support Server
 You can join our [Discord Server](https://discord.gg/2gfJT487PK)
+
+# TODO
+1. Migrate to https://github.com/tomato6966/lavalink-client
