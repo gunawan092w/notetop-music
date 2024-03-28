@@ -10,12 +10,10 @@
   "license": "MIT",
   "dependencies": {
     "discord.js": "^14.14.1",
-    "erela.js": "github:Tomato6955/better-erela.js",
-    "erela.js-spotify": "^1.2.0",
+    "erela.js": "github:Tomato6966/erela.js",
     "express.js": "^1.0.0",
     "toml": "^3.0.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gunawan092w/notetop-music.git"

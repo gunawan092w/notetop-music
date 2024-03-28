@@ -1,5 +1,5 @@
 const { GatewayIntentBits, Client, Collection, REST, Routes } = require('discord.js');
-const { Manager } = require("erela.js")
+const { Manager } = require("erela.js");
 const Spotify = require("erela.js-spotify")
 const fs = require("fs");
 const toml = require('toml');
@@ -14,8 +14,7 @@ for (const file of commandFiles) {const command = require(`./commands/${file}`);
 
 client.manager = new Manager ({
     plugins: [ new Spotify({ clientID, clientSecret }) ],
-    nodes: [{ host: "lava-v3.ajieblogs.eu.org", port:443, password: "https://dsc.gg/ajidevserver", retryDelay: 5000, version: "v3", useVersionPath: false, secure: true }],
-    //nodes: [{ host: "127.0.0.1", port:8081, password: "youshallnotpass", retryDelay: 5000, useVersionPath: false }],
+    nodes: [{ host: "lava-v3.ajieblogs.eu.org", port:443, password: "https://dsc.gg/ajidevserver", retryDelay: 5000, version: "v3", useVersionPath: true, secure: true }],
     send: (id, payload) => { const guild = client.guilds.cache.get(id); if (guild) guild.shard.send(payload); }
 });
 
