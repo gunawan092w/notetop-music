@@ -1,5 +1,5 @@
 #Info
-This project has been paused due to my account recently got hacked.
+This project has been abandoned.
 
 <div align="center">
   <h1>Notetop Music</h1>
